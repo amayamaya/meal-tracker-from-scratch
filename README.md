@@ -56,8 +56,8 @@ Additional considerations:
 ### To Do List
 
 1. adding ingredients
--  [ ] Make my form
--  [ ] Add form event listener using (`getElementById`)
+-  [X] Make my form
+-  [X] Add form event listener using (`getElementById`)
 -  [ ] Create an ingredient object from the form data 
 -  [ ] Push the ingredient onto ingredients array (state)
 -  [ ] Write `renderIngredients` function
