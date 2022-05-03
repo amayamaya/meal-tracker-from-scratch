@@ -20,10 +20,20 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+            <h2>Snacker Tracker</h2>
+            <form id="form">
+                <input name="ingredient" id="ingredient">
+                <input name="quantity" id="quantity">
+                <select name="measurement" id="measurement">
+                    <option name="cups" id="cups">Cups</option>
+                    <option name="grams" id="grams">Grams</option>
+                    <option name="mL" id="mL">Milliliters</option>
+                    <option name="teaspoons" id="teaspoons">Teaspoons</option>
+                    <option name="tablespoons" id="tablespoons">Tablespoons</option>
+                </select>
+                <button id="submit">Submit</button>
+            </form>
+            <ul id="ingredientList"></ul>
         </section>
     </main>
     <footer>
