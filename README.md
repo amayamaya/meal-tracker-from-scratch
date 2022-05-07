@@ -56,12 +56,12 @@ Additional considerations:
 ### To Do List
 
 1. adding ingredients
--  [X] Make my form
--  [X] Add form event listener using (`getElementById`)
--  [X] Create an ingredient object from the form data 
--  [X] Push the ingredient onto ingredients array (state)
--  [X] Write `renderIngredients` function
--  [X] Write `displayIngredients` function (calling `renderIngredients` for each item) clear out the existing list, loop through each ingredient, call renderIngredient, append `<li>` to the list
+-  [ ] Make my form
+-  [ ] Add form event listener using (`getElementById`)
+-  [ ] Create an ingredient object from the form data 
+-  [ ] Push the ingredient onto ingredients array (state)
+-  [ ] Write `renderIngredients` function
+-  [ ] Write `displayIngredients` function (calling `renderIngredients` for each item) clear out the existing list, loop through each ingredient, call renderIngredient, append `<li>` to the list
 
 2. Removing ingredients 
 -  [ ] add my remove button 

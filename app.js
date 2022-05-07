@@ -1,34 +1,29 @@
+  // import functions and grab DOM elements
 import { renderIngredients } from './utils.js';
+const form = document.getElementById("form");
+const ingredientEl = document.getElementById("ingredient");
+const quantityEl = document.getElementById("quantity");
+const measurementEl = document.getElementById("measurement");
+const ingredientListEl = document.getElementById("ingredient-list");
 
-// import functions and grab DOM elements
-const foodForm = document.getElementById('form');
-// const ingredientList = document.getElementById('ingredient-list');
+let ingredients = [];
 
-
-// let state
-// let ingredients = [];
-// let quantity = [];
-// let measurement = [];
-
-// set event listeners 
-foodForm.addEventListener('submit', (e) => {
-    // console.log(e);
+  // set event listeners 
+form.addEventListener('submit', (e) => {
     e.preventDefault();
+    const ingredientName = ingredientEl.value;
+    const ingredientQuantity = quantityEl.value;
+    const ingredientMeasurement = measurementEl.value;
 
-    // const foodData = new FormData(foodForm);
-    // console.log(foodData.get('measurement'));
+    let ingredient = {
+        ingredient: ingredientName,
+        quantity: ingredientQuantity,
+        measurement: ingredientMeasurement,
+    };
+    ingredients.push(ingredient);
+    console.log(ingredients);
 
-    // const ingredient = { ingredient: foodData.get('ingredient'), quantity: foodData.get('quantity'), measurement:foodData.get('measurement') };
-    // console.log(ingredient);
-});
-
-// ingredients.push(ingredient);
-// console.log(ingredients);
-
-renderIngredients();
-foodForm.reset();
-
-
+}); 
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
