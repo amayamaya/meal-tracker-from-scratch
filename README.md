@@ -24,3 +24,81 @@ Additional considerations:
   - What needs to live in a persistence layer?
 - Is there some state we need to initialize?
 - Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
+# From Scratch Planning
+
+## Add Ingredients Section 
+
+### HTML Elements
+-  Heading
+-  Form with inputs/select(s) for ingredients, qty, measurement, button 
+-  Button for removing the last item
+- `<ul>` for keeping track of ingredients
+
+### Events
+1. Add Ingredient(form submit)
+2. Remove Last Item (button click)
+
+### State 
+-  An array of ingredients with the following structure:
+```js
+{
+  ingredient: 'Black Beans',
+  quantity: 1,
+  measurement: 'Cups'
+}
+```
+
+### Functions
+-  `renderIngredients` -- create an `<li>` for an ingredient object
+-  `displayIngredients` -- clear out the existing list, loop through each ingredient, call renderIngredient, append `<li>` to the list
+
+### To Do List
+
+1. adding ingredients
+-  [X] Make my form
+-  [X] Add form event listener using (`getElementById`)
+-  [X] Create an ingredient object from the form data 
+-  [X] Push the ingredient onto ingredients array (state)
+-  [X] Write `renderIngredients` function
+-  [X] Write `displayIngredients` function (calling `renderIngredients` for each item) clear out the existing list, loop through each ingredient, call renderIngredient, append `<li>` to the list
+
+2. Removing ingredients 
+-  [ ] add my remove button 
+-  [ ] Ad event listener to button
+-  [ ] Remove the last item from the ingredients array
+-  [ ] Call `displayIngredients`
+
+## Save Meal Selection
+
+### HTML Elements 
+-  Heading
+-  Save button
+-  Mean name input
+
+### Events
+-  Save button click
+
+### State 
+-  Array of Meals with the following structure:
+
+```js
+{ 
+  name: 'Black Bean Salad',
+  ingredientCount: 2 
+}
+```
+
+### Functions
+-  `renderMeal` - return an `<li>` with the meal info
+- `displayMeals` - clears the list of meals, loops through the state and calls `renderMeal` for each meal in state
+
+### To Do List
+-  [ ] Ad input button and html
+-  [ ] Ad button event listener
+-  [ ] Create the meal object using the input value as well as the current list of ingredients 
+-  [ ] Push the meal object onto the meal array
+-  [ ] Clear out the ingredients state and call `displayIngredients`
+-  [ ] Write out `renderMeal` function
+-  [ ] Write out `displayMeals` function (calling `renderMeal` for each item in the meals array)
+-  [ ] Call `displayMeals`
